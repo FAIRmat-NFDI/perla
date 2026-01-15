@@ -1,6 +1,6 @@
 # Getting Started with PERLA
 
-Welcome to PERLA! This tutorial will guide you through your first steps with the Perovskite Extraction & Research Living Archive. By the end of this guide, you'll understand how to access and explore the database.
+Welcome to PERLA! This tutorial will guide you through your first steps with the Perovskite Solar Cells Living Archive. By the end of this guide, you'll understand how to access and explore the database.
 
 ## What You'll Learn
 
@@ -30,42 +30,14 @@ The PERLA database is hosted on the NOMAD platform and accessible through a web 
 
 ## Step 2: Understanding the Data Structure
 
-PERLA organizes data hierarchically:
+The database is organized around cell entries. Each cell from a paper leads to a new entry.
+The entries contain different amounts of information, based on what could be extracted.
 
-```
-Publication → Device → Measurements
-```
-
-### Key Parameters Available
-
-**Device Architecture**
-- Device structure (n-i-p, p-i-n)
-- Layer materials and thicknesses
-- Substrate information
-
-**Perovskite Composition**
-- Chemical formula
-- Cation and anion compositions
-- Processing conditions
-
-**Performance Metrics**
-- Power conversion efficiency (PCE)
-- Open-circuit voltage (Voc)
-- Short-circuit current density (Jsc)
-- Fill factor (FF)
-
-**Stability Data**
-- Operational stability
-- Storage stability
-- Environmental testing conditions
 
 ## Step 3: Basic Search and Filtering
 
 ### Simple Search
-1. Use the search bar to find entries by:
-   - Author names
-   - Publication titles
-   - Material keywords (e.g., "FA", "perovskite", "inverted")
+1. Use the search bar to find entries by: free text search or searching in particular fields.
 
 ### Advanced Filtering
 1. **Efficiency Range**: Filter devices by PCE values
@@ -92,9 +64,8 @@ PERLA provides interactive visualizations:
 
 For further analysis, you can export data in multiple formats:
 
-1. **JSON**: Machine-readable format for programming
-2. **CSV**: Spreadsheet-compatible format
-3. **Excel**: Direct import into Excel or similar tools
+1. API query for downloading the dataset
+2. Export of selected entries (as raw files or processes entities)
 
 ## Next Steps
 
@@ -108,29 +79,6 @@ For further analysis, you can export data in multiple formats:
 - Set up [local extraction](../how_to/local_extraction.md) for your own papers
 - Contribute to the database through [data validation](../how_to/contribute_data.md)
 
-## Troubleshooting
-
-### Common Issues
-
-**Slow Loading**
-- The database is continuously updated; initial loading may take a moment
-- Try refreshing the page if search results don't appear
-
-**No Results Found**
-- Check your filter settings - they may be too restrictive
-- Try broader search terms
-- Clear all filters and start with basic searches
-
-**Visualization Not Loading**
-- Ensure JavaScript is enabled in your browser
-- Try a different browser if issues persist
-- Some visualizations require larger datasets to display properly
-
-## Getting Help
-
-- **Documentation**: Explore other sections of this documentation
-- **GitHub Issues**: Report problems or ask questions
-- **Community**: Connect with other PERLA users
 
 ## Summary
 

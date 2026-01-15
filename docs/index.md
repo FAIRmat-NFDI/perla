@@ -6,7 +6,8 @@ PERLA is an ecosystem for perovskite solar cells data built on NOMAD. It provide
 
 ## What is PERLA?
 
-PERLA addresses the challenge of keeping pace with rapidly growing publication rates by providing automated tools for data extraction from perovskite solar cell literature. The ecosystem combines large language models with physics-based validation to extract device parameters from publications and integrate them into a continuously updated database.
+PERLA addresses the challenge of keeping pace with rapidly growing publication rates by providing automated tools for data extraction from perovskite solar cell literature.
+The ecosystem combines large language models with physics-based validation to extract device parameters from publications and integrate them into a continuously updated database.
 
 ### Key Components
 
@@ -20,30 +21,33 @@ PERLA addresses the challenge of keeping pace with rapidly growing publication r
 
 ### I want the data
 🔗 **[NOMAD Dataset Search](https://nomad-lab.eu/prod/v1/staging/gui/search/perovskite-solar-cells-database)**
+
 - Browse and filter the complete perovskite solar cell database
 - Interactive visualizations and analysis tools
 - Export data in multiple formats
-
+<!--
 ### I want to query via API
 📚 **[API Tutorials](tutorials/getting_started.md)**
-- Learn programmatic access to PERLA data
-- Python examples and code snippets
-- Integration with analysis workflows
+
+- Learn -->
 
 ### I want to run extraction locally
-🔧 **[Local Extraction Guide](how_to/local_extraction.md)** | **[Perla-Extract Docs](https://github.com/lamalab-org/perla-extract)**
+🔧 **[Perla-Extract Docs](https://github.com/lamalab-org/perla-extract)**
+
 - Set up local extraction pipeline
 - Process your own papers
 - Customize extraction parameters
 
 ### I want to understand normalization/schema mapping
 📖 **[NOMAD Perovskite Schema](https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database)**
+
 - Detailed schema documentation
 - Data normalization procedures
 - Field definitions and validation rules
 
 ### I want to run the automation bot
-🤖 **[Automation Bot Guide](how_to/automation_bot.md)** | **[Perla-Extract Repository](https://github.com/lamalab-org/perla-extract)**
+🤖  **[Perla-Extract Repository](https://github.com/lamalab-org/perla-extract)**
+
 - Deploy continuous monitoring
 - Configure RSS feeds and filters
 - Automated data ingestion workflows
@@ -70,7 +74,7 @@ With post-2021 literature now flowing continuously into structured form, PERLA e
 Start your PERLA journey with hands-on tutorials:
 
 - [Getting Started](tutorials/getting_started.md)
-- [Your First Query](tutorials/first_query.md)
+<!-- - [Your First Query](tutorials/first_query.md) -->
 - [Case Studies](tutorials/getting_started.md#case-studies)
 
 </div>
@@ -81,9 +85,9 @@ Start your PERLA journey with hands-on tutorials:
 
 Solve specific tasks with step-by-step instructions:
 
-- [Access Data in NOMAD](how_to/nomad_access.md)
+<!-- - [Access Data in NOMAD](how_to/nomad_access.md)
 - [Query via API](how_to/api_query.md)
-- [Run Local Extraction](how_to/local_extraction.md)
+- [Run Local Extraction](how_to/local_extraction.md) -->
 
 </div>
 
@@ -101,18 +105,16 @@ Understand the concepts behind PERLA:
 </div>
 <div markdown="block">
 
-### 📋 Reference
+<!-- ### 📋 Reference
 *Information-oriented*
 
 Technical specifications and API documentation:
 
 - [API Reference](reference/api.md)
 - [Data Schema](reference/schema.md)
-- [Bibliography](reference/bibliography.md)
+- [Bibliography](reference/bibliography.md) -->
 
 </div>
 </div>
 
 ---
-
-*PERLA demonstrates a paradigm shift: transforming static publications into dynamic knowledge resources that enable data-driven discovery to operate at the speed of publication.*
