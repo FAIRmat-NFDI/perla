@@ -67,3 +67,33 @@
     margin-top: 0;
     font-weight: 700;
 }
+
+/* Jupyter notebook and Plotly plot styling */
+.plotly-graph-div {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.jp-RenderedHTMLCommon {
+    color: var(--md-default-fg-color);
+}
+
+.jp-Cell {
+    margin: 1em 0;
+}
+
+.jp-InputArea {
+    background-color: var(--md-code-bg-color);
+    border-radius: 4px;
+    padding: 0.5em;
+}
+
+.jp-OutputArea {
+    margin-top: 0.5em;
+}
+
+/* Ensure notebook outputs display properly */
+.jupyter-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}

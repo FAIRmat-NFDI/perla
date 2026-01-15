@@ -37,10 +37,12 @@ dev = [
     "ruff",
     "pytest",
     "structlog",
-    "mkdocs",
-    "mkdocs-material==8.1.1",
+    "mkdocs>=1.4.0,<1.6.0",
+    "mkdocs-material>=8.1.1,<10.0.0",
     "pymdown-extensions",
     "mkdocs-click",
+    "mkdocs-jupyter>=0.24.0,<0.25.0",
+    "lxml[html_clean]",
     "pytest-asyncio",
 ]
 

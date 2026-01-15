@@ -1,22 +1,47 @@
-site_name: perla
-site_description: LA hub.
-site_author: Pepe Marquez
+site_name: PERLA
+site_description: Perovskite Extraction & Research Living Archive - The autonomous living database for perovskite solar cells
+site_author: PERLA Team
 
 repo_url: https://github.com/FAIRmat-NFDI/perla
 edit_uri: ""
 
 nav:
   - Home: index.md
-  - Tutorial: tutorial/tutorial.md
-  - How-to guides:
-      - Install this Plugin: how_to/install_this_plugin.md
-      - Use this Plugin: how_to/use_this_plugin.md
-      - Contribute to this plugin: how_to/contribute_to_this_plugin.md
-      - Contribute to the documentation: how_to/contribute_to_the_documentation.md
-  - Explanation: explanation/explanation.md
-  - Reference: reference/references.md
+  - Tutorials:
+      - Getting Started: tutorials/getting_started.md
+      - Your First Query: tutorials/first_query.md
+      - Case Studies:
+          - Query PERLA Database: notebooks/query-perovskite-database.ipynb
+          - Performance Evolution Analysis: notebooks/performance-evolution.ipynb
+          - Bandgap Evolution Analysis: notebooks/bandgap-evolution.ipynb
+          - Architecture Evolution Analysis: notebooks/architecture-evolution.ipynb
+          - Diversity Analysis: notebooks/diversity_analysis.ipynb
+          - ML Prediction with CrabNet: notebooks/crabnet-perovskite-bandgap-prediction.ipynb
+  - How-to Guides:
+      - Access Data in NOMAD: how_to/nomad_access.md
+      - Query via API: how_to/api_query.md
+      - Run Local Extraction: how_to/local_extraction.md
+      - Run the Automation Bot: how_to/automation_bot.md
+      - Contribute Data: how_to/contribute_data.md
+      - Contribute to PERLA: how_to/contribute_to_perla.md
+      - Contribute to Documentation: how_to/contribute_to_the_documentation.md
+  - Explanation:
+      - What is PERLA?: explanation/what_is_perla.md
+      - Architecture & Pipeline: explanation/architecture.md
+      - Data Schema & Normalization: explanation/schema_mapping.md
+      - Ecosystem & Credits: explanation/ecosystem.md
+      - Citation Guidelines: explanation/citation.md
+  - Reference:
+      - API Reference: reference/api.md
+      - Data Schema: reference/schema.md
+      - Bibliography: reference/bibliography.md
 plugins:
   - search
+  - mkdocs-jupyter:
+      include_source: true
+      ignore_h1_titles: true
+      execute: false
+      include_requirejs: true
 theme:
   name: material
   palette:
@@ -24,8 +49,8 @@ theme:
     accent: "#008A67"
   font:
     text: "Titillium Web"
-  logo: assets/nomad-plugin-logo.png
-  favicon: assets/favicon.png
+  logo: assets/perla-logo-icon.png
+  favicon: assets/perla-logo-icon.png
   features:
     - navigation.instant
   custom_dir: docs/theme
@@ -51,10 +76,10 @@ markdown_extensions:
 extra:
   generator: false
   homepage: https://nomad-lab.eu
-use_directory_urls: false
+use_directory_urls: true
 extra_css:
   - stylesheets/extra.css
 extra_javascript:
-  - javascript.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.plot.ly/plotly-2.26.0.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js
