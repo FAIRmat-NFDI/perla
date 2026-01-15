@@ -1,6 +1,7 @@
 # Architecture & Pipeline
 
-PERLA's architecture is designed for scalable, automated extraction and validation of perovskite solar cell data from scientific literature. The system operates as a continuous pipeline that monitors publications, extracts data, validates findings, and updates the living database.
+PERLA's architecture is designed for scalable, automated extraction and validation of perovskite solar cell data from scientific literature.
+The system operates as a continuous pipeline that monitors publications, extracts data, validates findings, and updates the living database.
 
 ## System Overview
 
@@ -8,23 +9,20 @@ PERLA's architecture is designed for scalable, automated extraction and validati
 Literature Sources → Monitoring → Extraction → Validation → Database → API/Interface
 ```
 
-The pipeline consists of several interconnected components that work together to maintain a continuously updated, high-quality dataset.
+The pipeline consists of several interconnected components that work together to maintain a continuously updated, high-quality data archive.
 
 ## Core Components
 
 ### 1. Literature Monitoring
 
 **RSS Feed Integration**
-- Monitors major publishers: Nature Publishing Group, Science/AAAS, ACS, RSC, Wiley, Elsevier
+- Monitors major publishers
 - Filters publications based on perovskite-related keywords
 - Handles full-text access and PDF processing
 - Maintains publication metadata and provenance
 
 **Content Processing**
-- Extracts text from PDFs using advanced parsing
-- Identifies and processes figures, tables, and supplementary materials
-- Handles various document formats and publisher-specific layouts
-- Preserves structural information for context-aware extraction
+- Extracts text from PDFs
 
 ### 2. Data Extraction Engine
 
@@ -32,13 +30,6 @@ The pipeline consists of several interconnected components that work together to
 - Leverages state-of-the-art LLMs for intelligent text analysis
 - Extracts device parameters, experimental conditions, and performance metrics
 - Processes both structured (tables) and unstructured (text) data sources
-- Handles figure analysis for performance curves and device schematics
-
-**Multi-modal Processing**
-- Text analysis for experimental descriptions and results
-- Table parsing for structured data extraction
-- Figure analysis for performance characteristics
-- Cross-referencing between different data sources within papers
 
 ### 3. Physics-based Validation
 

@@ -2,14 +2,15 @@
 
 **Perovskite Extraction & Research Living Archive**
 
-PERLA is an ecosystem for perovskite solar cells data built on NOMAD. It provides tools and workflows for extracting, structuring, and analyzing experimental data from the scientific literature.
+PERLA is an ecosystem for perovskite solar cells data built on NOMAD.
+It provides tools and workflows for extracting, structuring, and analyzing experimental data from the scientific literature.
 
 ## What is PERLA?
 
 PERLA addresses the challenge of keeping pace with rapidly growing publication rates by providing automated tools for data extraction from perovskite solar cell literature.
-The ecosystem combines large language models with physics-based validation to extract device parameters from publications and integrate them into a continuously updated database.
+The ecosystem combines large language models with physics-based validation and data processing to extract device parameters from publications and integrate them into a continuously updated database.
 
-### Key Components
+### Key Features
 
 - **Automated Data Extraction**: Tools for monitoring literature and extracting device data
 - **Physics-Based Validation**: Quality control through physical consistency checks
@@ -25,14 +26,14 @@ The ecosystem combines large language models with physics-based validation to ex
 - Browse and filter the complete perovskite solar cell database
 - Interactive visualizations and analysis tools
 - Export data in multiple formats
-<!--
-### I want to query via API
-📚 **[API Tutorials](tutorials/getting_started.md)**
 
-- Learn -->
+### I want to query via API
+📚 **[API Tutorials](notebooks/query-perovskite-database.ipynb)**
+
+- Learn how to programatically use the PERLA data with API queries
 
 ### I want to run extraction locally
-🔧 **[Perla-Extract Docs](https://github.com/lamalab-org/perla-extract)**
+🔧 **[PERLA-Extract Docs](https://github.com/lamalab-org/perla-extract)**
 
 - Set up local extraction pipeline
 - Process your own papers
@@ -46,11 +47,10 @@ The ecosystem combines large language models with physics-based validation to ex
 - Field definitions and validation rules
 
 ### I want to run the automation bot
-🤖  **[Perla-Extract Repository](https://github.com/lamalab-org/perla-extract)**
+🤖  **[PERLA-Extract Repository](https://github.com/lamalab-org/perla-extract)**
 
 - Deploy continuous monitoring
 - Configure RSS feeds and filters
-- Automated data ingestion workflows
 
 ## Recent Insights from the Living Database
 
