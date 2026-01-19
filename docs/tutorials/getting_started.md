@@ -36,29 +36,23 @@ The entries contain different amounts of information, based on what could be ext
 
 ## Step 3: Basic Search and Filtering
 
-### Simple Search
-1. Use the search bar to find entries by: free text search or searching in particular fields.
 
-### Advanced Filtering
-1. **Efficiency Range**: Filter devices by PCE values
-2. **Publication Date**: Focus on recent or historical data
-3. **Device Type**: Filter by architecture (n-i-p vs p-i-n)
-4. **Materials**: Search by specific perovskite compositions
+
+### Simple Search
+1. Use the search bar to find entries by: free text search or searching in particular fields. If you type in the search bar, you can select between free text search across the entire entries or specific search methods on fields. Clicking on the questionmark reveals details.
+
+![Example of search](../assets/gifs/search.gif)
 
 ### Example Search
 Try searching for high-efficiency inverted devices:
 - Set efficiency filter: > 20%
-- Device structure: p-i-n
-- Publication date: Last 2 years
+- Absorber: FAPbI3
 
 ## Step 4: Exploring Visualizations
 
-PERLA provides interactive visualizations:
+The NOMAD frontend allows to interactively explore data via visualizations. You can interact with the existing ones or easily add novel ones.
 
-1. **Efficiency Trends**: See performance evolution over time
-2. **Architecture Distribution**: Compare device types
-3. **Composition Analysis**: Explore material trends
-4. **Stability Correlations**: Understand performance-stability relationships
+![Visualization](../assets/gifs/visualization.gif)
 
 ## Step 5: Exporting Data
 
@@ -67,17 +61,7 @@ For further analysis, you can export data in multiple formats:
 1. API query for downloading the dataset
 2. Export of selected entries (as raw files or processes entities)
 
-## Next Steps
-
-### For Beginners
-- Explore the [Case Studies](../notebooks/query-perovskite-database.ipynb) for guided analysis examples
-- Try different search combinations to understand data coverage
-- Review the [Data Schema](../reference/schema.md) for complete parameter definitions
-
-### For Advanced Users
-- Learn [API access](../how_to/api_query.md) for programmatic data retrieval
-- Set up [local extraction](../how_to/local_extraction.md) for your own papers
-- Contribute to the database through [data validation](../how_to/contribute_data.md)
+![Export](../assets/gifs/export.gif)
 
 
 ## Summary
@@ -87,6 +71,5 @@ You've learned how to:
 - ✅ Navigate the search interface and apply filters
 - ✅ Understand the hierarchical data structure
 - ✅ Export data for your own analysis
-- ✅ Find additional resources for advanced usage
 
-Ready for more? Continue with [Your First Query](first_query.md) to learn about programmatic access, or dive into our [Case Studies](../notebooks/query-perovskite-database.ipynb) for real research examples.
+Ready for more?  Dive into our [Case Studies](../notebooks/query-perovskite-database.ipynb) for real research examples.

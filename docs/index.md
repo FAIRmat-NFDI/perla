@@ -1,14 +1,10 @@
 # Welcome to PERLA
 
-**Perovskite Extraction & Research Living Archive**
+**Perovskite Solar Cells Living Archive**
 
 PERLA is an ecosystem for perovskite solar cells data built on NOMAD.
 It provides tools and workflows for extracting, structuring, and analyzing experimental data from the scientific literature.
 
-## What is PERLA?
-
-PERLA addresses the challenge of keeping pace with rapidly growing publication rates by providing automated tools for data extraction from perovskite solar cell literature.
-The ecosystem combines large language models with physics-based validation and data processing to extract device parameters from publications and integrate them into a continuously updated database.
 
 ### Key Features
 
@@ -105,14 +101,12 @@ Understand the concepts behind PERLA:
 </div>
 <div markdown="block">
 
-<!-- ### 📋 Reference
+### 📋 Reference
 *Information-oriented*
 
 Technical specifications and API documentation:
 
-- [API Reference](reference/api.md)
-- [Data Schema](reference/schema.md)
-- [Bibliography](reference/bibliography.md) -->
+- [Bibliography](reference/bibliography.md)
 
 </div>
 </div>

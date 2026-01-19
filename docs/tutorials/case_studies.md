@@ -1,7 +1,7 @@
 # Case Studies
 
 These Jupyter notebooks demonstrate real-world applications of PERLA data.
-They have been used to create the figures for our [PERLA paper]().
+They have been used to create the figures for our [PERLA paper](PLACEHOLDER).
 
 ## Available Case Studies
 
