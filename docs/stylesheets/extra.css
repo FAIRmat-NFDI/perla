@@ -99,12 +99,21 @@
 }
 
 /* Hide right TOC sidebar on notebook pages for cleaner layout */
-.md-typeset .jupyter-wrapper ~ .md-sidebar--secondary,
-article:has(.jupyter-wrapper) ~ .md-sidebar--secondary {
+/* Target pages that contain jupyter-wrapper using body:has() */
+body:has(.jupyter-wrapper) .md-sidebar--secondary {
     display: none;
 }
 
-/* Expand notebook content when TOC is hidden */
+/* Expand content area when TOC is hidden on notebook pages */
+body:has(.jupyter-wrapper) .md-content {
+    max-width: 100%;
+}
+
+/* Make notebook content use full width */
+body:has(.jupyter-wrapper) .md-main__inner {
+    max-width: none;
+}
+
 .jupyter-wrapper {
     max-width: 100%;
 }
