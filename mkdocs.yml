@@ -15,7 +15,7 @@ nav:
           - Performance Evolution Analysis: notebooks/performance-evolution.ipynb
           - Bandgap Evolution Analysis: notebooks/bandgap-evolution.ipynb
           - Architecture Evolution Analysis: notebooks/architecture-evolution.ipynb
-          - Diversity Analysis: notebooks/diversity_analysis.ipynb
+          - Diversity Analysis: notebooks/diversity-analysis.ipynb
           - ML Prediction with CrabNet: notebooks/crabnet-perovskite-bandgap-prediction.ipynb
           - Distribution Shift Case Study: notebooks/ml-distribution-shift-case-study.ipynb
           - LLM Extraction Evaluation: notebooks/perovscribe-analysis.ipynb

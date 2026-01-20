@@ -45,7 +45,7 @@ Analyze:
 *Ideal for: Researchers interested in field development trends or researchers looking into examples for how to analyze PERLA data*
 
 
-### 🎯 [Diversity Analysis](../notebooks/diversity_analysis.ipynb)
+### 🎯 [Diversity Analysis](../notebooks/diversity-analysis.ipynb)
 **Compositional and structural diversity trends**
 
 Study:

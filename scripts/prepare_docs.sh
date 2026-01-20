@@ -30,23 +30,35 @@ fi
 # Create target directory
 mkdir -p "$NOTEBOOKS_TARGET"
 
-# Copy notebooks and supporting files
+# List of specific notebooks to copy (without underscores and backup copies)
+NOTEBOOKS=(
+    "query-perovskite-database.ipynb"
+    "performance-evolution.ipynb"
+    "bandgap-evolution.ipynb"
+    "architecture-evolution.ipynb"
+    "diversity-analysis.ipynb"
+    "crabnet-perovskite-bandgap-prediction.ipynb"
+    "ml-distribution-shift-case-study.ipynb"
+    "perovscribe-analysis.ipynb"
+    "perovskite-paperbot-plot.ipynb"
+)
+
+# Copy specific notebooks
 echo "Copying notebooks..."
-cp -r "$NOTEBOOKS_SOURCE"/*.ipynb "$NOTEBOOKS_TARGET/" || {
-    echo "ERROR: Failed to copy notebooks"
-    exit 1
-}
+for notebook in "${NOTEBOOKS[@]}"; do
+    if [ -f "$NOTEBOOKS_SOURCE/$notebook" ]; then
+        cp "$NOTEBOOKS_SOURCE/$notebook" "$NOTEBOOKS_TARGET/"
+        echo "  ✓ $notebook"
+    else
+        echo "  ✗ WARNING: $notebook not found in source"
+    fi
+done
 
 # Copy supporting Python files (plotly_theme.py, etc.)
 if [ -f "$NOTEBOOKS_SOURCE/plotly_theme.py" ]; then
     cp "$NOTEBOOKS_SOURCE/plotly_theme.py" "$NOTEBOOKS_TARGET/"
-fi
-
-# Copy parquet data file if it exists
-if [ -f "$NOTEBOOKS_SOURCE/perovskite_solar_cell_database.parquet" ]; then
-    echo "Copying data file..."
-    cp "$NOTEBOOKS_SOURCE/perovskite_solar_cell_database.parquet" "$NOTEBOOKS_TARGET/"
+    echo "  ✓ plotly_theme.py"
 fi
 
 echo "Documentation notebooks prepared successfully!"
-echo "Notebooks copied: $(ls -1 "$NOTEBOOKS_TARGET"/*.ipynb | wc -l)"
+echo "Notebooks copied: ${#NOTEBOOKS[@]}"
