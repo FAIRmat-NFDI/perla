@@ -140,3 +140,10 @@ where = ["src"]
 [tool.cruft]
 # Avoid updating workflow files, this leads to permissions issues
 skip = [".github/*"]
+
+[tool.pytest.ini_options]
+# Exclude the perovskite plugin checkout directory from test discovery
+# (it's only checked out for notebook content, not for running its tests)
+testpaths = ["tests"]
+norecursedirs = ["nomad-perovskite-solar-cells-database", "docs"]
+asyncio_mode = "strict"
