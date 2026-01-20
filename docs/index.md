@@ -1,48 +1,114 @@
-# Welcome to the `perla` documentation
+# Welcome to PERLA
 
-LA hub.
+**Perovskite Solar Cells Living Archive**
 
-## Introduction
+PERLA is an ecosystem for perovskite solar cells data built on NOMAD.
+It provides tools and workflows for extracting, structuring, and analyzing experimental data from the scientific literature.
 
-!!! note "Attention"
-    TODO
+
+### Key Features
+
+- **Automated Data Extraction**: Tools for monitoring literature and extracting device data
+- **Physics-Based Validation**: Quality control through physical consistency checks
+- **Living Database**: Continuously updated dataset in NOMAD
+- **FAIR Data**: Structured, interoperable data following FAIR principles
+- **Open Source**: All tools and data are freely available
+
+## Quick Navigation
+
+### I want the data
+🔗 **[NOMAD Dataset Search](https://nomad-lab.eu/prod/v1/staging/gui/search/perovskite-solar-cells-database)**
+
+- Browse and filter the complete perovskite solar cell database
+- Interactive visualizations and analysis tools
+- Export data in multiple formats
+
+### I want to query via API
+📚 **[API Tutorials](notebooks/query-perovskite-database.ipynb)**
+
+- Learn how to programatically use the PERLA data with API queries
+
+### I want to run extraction locally
+🔧 **[PERLA-Extract Docs](https://github.com/lamalab-org/perla-extract)**
+
+- Set up local extraction pipeline
+- Process your own papers
+- Customize extraction parameters
+
+### I want to understand normalization/schema mapping
+📖 **[NOMAD Perovskite Schema](https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database)**
+
+- Detailed schema documentation
+- Data normalization procedures
+- Field definitions and validation rules
+
+### I want to run the automation bot
+🤖  **[PERLA-Extract Repository](https://github.com/lamalab-org/perla-extract)**
+
+- Deploy continuous monitoring
+- Configure RSS feeds and filters
+
+## Recent Insights from the Living Database
+
+With post-2021 literature now flowing continuously into structured form, PERLA enables observation of evolutionary trends such as:
+
+- **Performance Evolution**: Trajectories in voltage loss reduction over time
+- **Architectural Changes**: Shifts toward inverted (p-i-n) structures with self-assembled monolayers
+- **Compositional Trends**: Transitions from MA-dominated to FA-rich mixed-cation perovskites
+- **Bandgap Distribution**: Evolution toward the 1.50-1.55 eV range
+
+*For detailed analysis of these trends, see [our recent publication](PLACEHOLDER_PAPER_LINK).*
+
+## Getting Started
 
 <div markdown="block" class="home-grid">
 <div markdown="block">
 
-### Tutorial
+### 📚 Tutorials
+*Learning-oriented*
 
-TODO
+Start your PERLA journey with hands-on tutorials:
 
-- [Tutorial](tutorial/tutorial.md)
-
-</div>
-<div markdown="block">
-
-### How-to guides
-
-How-to guides provide step-by-step instructions for a wide range of tasks, with the overarching topics:
-
-- [Install this plugin](how_to/install_this_plugin.md)
-- [Use this plugin](how_to/use_this_plugin.md)
-- [Contribute to this plugin](how_to/contribute_to_this_plugin.md)
-- [Contribute to the documentation](how_to/contribute_to_the_documentation.md)
-
-</div>
-
-<div markdown="block">
-
-### Explanation
-
-The explanation [section](explanation/explanation.md) provides background knowledge on this plugin.
+- [Getting Started](tutorials/getting_started.md)
+<!-- - [Your First Query](tutorials/first_query.md) -->
+- [Case Studies](tutorials/getting_started.md#case-studies)
 
 </div>
 <div markdown="block">
 
-### Reference
+### 🛠️ How-to Guides
+*Problem-oriented*
 
-The reference [section](reference/references.md) includes all CLI commands and arguments, all configuration options,
-the possible schema annotations and their arguments, and a glossary of used terms.
+Solve specific tasks with step-by-step instructions:
+
+<!-- - [Access Data in NOMAD](how_to/nomad_access.md)
+- [Query via API](how_to/api_query.md)
+- [Run Local Extraction](how_to/local_extraction.md) -->
+
+</div>
+
+<div markdown="block">
+
+### 💡 Explanation
+*Understanding-oriented*
+
+Understand the concepts behind PERLA:
+
+- [What is PERLA?](explanation/what_is_perla.md)
+- [Architecture & Pipeline](explanation/architecture.md)
+- [Ecosystem & Credits](explanation/ecosystem.md)
+
+</div>
+<div markdown="block">
+
+### 📋 Reference
+*Information-oriented*
+
+Technical specifications and API documentation:
+
+- [Bibliography](reference/bibliography.md)
 
 </div>
 </div>
+
+---

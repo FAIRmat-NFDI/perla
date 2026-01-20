@@ -120,6 +120,7 @@ venv.bak/
 
 # mkdocs documentation
 /site
+docs/notebooks/
 
 # mypy
 .mypy_cache/
@@ -128,3 +129,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#parquet
+*.parquet

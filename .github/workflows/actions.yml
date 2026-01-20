@@ -23,6 +23,19 @@ jobs:
     - name: Install dependencies
       run: |
         uv sync --all-extras
+    - name: Checkout perovskite plugin for notebooks
+      uses: actions/checkout@v4
+      with:
+        repository: FAIRmat-NFDI/nomad-perovskite-solar-cells-database
+        ref: main
+        path: nomad-perovskite-solar-cells-database
+    - name: Prepare documentation notebooks
+      run: |
+        chmod +x scripts/prepare_docs.sh
+        ./scripts/prepare_docs.sh
+    - name: Test documentation links
+      run: |
+        uv run pytest tests/test_links.py -v
     - name: Test with pytest
       run: |
         uv run --with coverage coverage run -m pytest -sv
