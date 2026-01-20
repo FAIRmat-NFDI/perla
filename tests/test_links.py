@@ -79,7 +79,9 @@ def test_notebooks_source_accessible():
 def test_all_referenced_notebooks_exist():
     """Verify all notebooks referenced in mkdocs.yml actually exist."""
     with open(MKDOCS_CONFIG) as f:
-        config = yaml.safe_load(f)
+        # Use unsafe_load to handle !!python/name: tags in mkdocs.yml
+        # safe_load can't parse Python object references used by mkdocs plugins
+        config = yaml.unsafe_load(f)
 
     # Extract all notebook references from nav
     notebook_refs = []
