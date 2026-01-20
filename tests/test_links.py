@@ -71,7 +71,7 @@ def test_all_referenced_notebooks_exist():
             for key, value in nav_item.items():
                 if isinstance(value, str) and value.endswith('.ipynb'):
                     notebook_refs.append(value)
-                elif isinstance(value, (list, dict)):
+                elif isinstance(value, list | dict):
                     extract_notebooks(value)
         elif isinstance(nav_item, list):
             for item in nav_item:
@@ -97,14 +97,44 @@ def test_all_referenced_notebooks_exist():
     )
 
 
+def _should_skip_link(link_path: str) -> bool:
+    """Check if a link should be skipped during validation."""
+    return (
+        link_path.startswith(('http://', 'https://', 'mailto:', '#'))
+        or 'PLACEHOLDER' in link_path
+    )
+
+
+def _resolve_link_path(link_path: str, md_file: Path) -> tuple[Path, Path | None]:
+    """Resolve a link path to its target and relative path from docs."""
+    if not link_path.startswith('/'):
+        target_path = (md_file.parent / link_path).resolve()
+        try:
+            relative_to_docs = target_path.relative_to(DOCS_DIR)
+        except ValueError:
+            relative_to_docs = None
+    else:
+        target_path = (DOCS_DIR / link_path.lstrip('/')).resolve()
+        relative_to_docs = Path(link_path.lstrip('/'))
+    return target_path, relative_to_docs
+
+
+def _is_valid_anchor_link(link_path: str, md_file: Path) -> bool:
+    """Check if an anchor link has a valid base file."""
+    if '#' not in link_path:
+        return False
+    base_path = link_path.split('#')[0]
+    if not base_path:
+        return False
+    base_target = (md_file.parent / base_path).resolve()
+    return base_target.exists()
+
+
 def test_markdown_internal_links():
     """Verify internal links in markdown files resolve correctly."""
     markdown_files = list(DOCS_DIR.rglob('*.md'))
-
-    # Pattern to match markdown links: [text](path)
     link_pattern = re.compile(r'\[([^\]]+)\]\(([^\)]+)\)')
-
-    # Known missing pages that are expected (work in progress)
+    
     expected_missing = {
         'tutorials/first_query.md',
         'how_to/nomad_access.md',
@@ -124,54 +154,30 @@ def test_markdown_internal_links():
         with open(md_file, encoding='utf-8') as f:
             content = f.read()
 
-        matches = link_pattern.findall(content)
-
-        for link_text, link_path in matches:
-            # Skip external URLs, anchors, and placeholders
-            if (
-                link_path.startswith(('http://', 'https://', 'mailto:', '#'))
-                or 'PLACEHOLDER' in link_path
-            ):
+        for link_text, link_path in link_pattern.findall(content):
+            if _should_skip_link(link_path):
                 continue
 
-            # Resolve relative links
-            if not link_path.startswith('/'):
-                # Relative to the markdown file
-                target_path = (md_file.parent / link_path).resolve()
-                # Get relative path from docs for checking expected_missing
-                try:
-                    relative_to_docs = target_path.relative_to(DOCS_DIR)
-                except ValueError:
-                    relative_to_docs = None
-            else:
-                # Absolute from docs root
-                target_path = (DOCS_DIR / link_path.lstrip('/')).resolve()
-                relative_to_docs = Path(link_path.lstrip('/'))
+            target_path, relative_to_docs = _resolve_link_path(link_path, md_file)
 
-            # Check if target exists
-            if not target_path.exists():
-                # Check if it's an expected missing page
-                if relative_to_docs and str(relative_to_docs) in expected_missing:
-                    print(f'⚠ Expected missing page: {link_path}')
-                    continue
+            if target_path.exists():
+                continue
 
-                # Check if it's an anchor link (ending with #something)
-                if '#' in link_path:
-                    base_path = link_path.split('#')[0]
-                    if base_path:
-                        base_target = (md_file.parent / base_path).resolve()
-                        if base_target.exists():
-                            # Base file exists, anchor may be valid
-                            continue
+            # Check if it's an expected missing page
+            if relative_to_docs and str(relative_to_docs) in expected_missing:
+                print(f'⚠ Expected missing page: {link_path}')
+                continue
 
-                broken_links.append(
-                    {
-                        'file': md_file.relative_to(PERLA_DIR),
-                        'link_text': link_text,
-                        'link_path': link_path,
-                        'resolved_path': target_path,
-                    }
-                )
+            # Check if it's a valid anchor link
+            if _is_valid_anchor_link(link_path, md_file):
+                continue
+
+            broken_links.append({
+                'file': md_file.relative_to(PERLA_DIR),
+                'link_text': link_text,
+                'link_path': link_path,
+                'resolved_path': target_path,
+            })
 
     if broken_links:
         error_msg = 'Broken internal links found:\n'
@@ -180,7 +186,6 @@ def test_markdown_internal_links():
             error_msg += f'\n    Link text: {link["link_text"]}'
             error_msg += f'\n    Link path: {link["link_path"]}'
             error_msg += f'\n    Resolved to (missing): {link["resolved_path"]}\n'
-
         pytest.fail(error_msg)
 
 
