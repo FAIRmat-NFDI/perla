@@ -134,7 +134,7 @@ def test_markdown_internal_links():
     """Verify internal links in markdown files resolve correctly."""
     markdown_files = list(DOCS_DIR.rglob('*.md'))
     link_pattern = re.compile(r'\[([^\]]+)\]\(([^\)]+)\)')
-    
+
     expected_missing = {
         'tutorials/first_query.md',
         'how_to/nomad_access.md',
@@ -172,12 +172,14 @@ def test_markdown_internal_links():
             if _is_valid_anchor_link(link_path, md_file):
                 continue
 
-            broken_links.append({
-                'file': md_file.relative_to(PERLA_DIR),
-                'link_text': link_text,
-                'link_path': link_path,
-                'resolved_path': target_path,
-            })
+            broken_links.append(
+                {
+                    'file': md_file.relative_to(PERLA_DIR),
+                    'link_text': link_text,
+                    'link_path': link_path,
+                    'resolved_path': target_path,
+                }
+            )
 
     if broken_links:
         error_msg = 'Broken internal links found:\n'
