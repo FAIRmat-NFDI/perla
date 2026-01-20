@@ -26,7 +26,7 @@ maintainers = [
 license = { file = "LICENSE" }
 dependencies = [
     "nomad-lab>=1.4.0",
-    
+
 ]
 
 [project.urls]
@@ -42,15 +42,17 @@ dev = [
     "pymdown-extensions",
     "mkdocs-click",
     "mkdocs-jupyter>=0.24.0,<0.25.0",
+    "mkdocs-glightbox",
     "lxml[html_clean]",
     "pytest-asyncio",
+    "pyyaml",
 ]
 
 [tool.uv]
 extra-index-url = [
   "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple",
 ]
-    
+
 [tool.ruff]
 # Exclude a variety of commonly ignored directories.
 exclude = [

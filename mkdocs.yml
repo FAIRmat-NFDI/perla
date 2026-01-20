@@ -40,6 +40,7 @@ nav:
       - Bibliography: reference/bibliography.md
 plugins:
   - search
+  - glightbox
   - mkdocs-jupyter:
       include_source: true
       ignore_h1_titles: true
@@ -56,6 +57,11 @@ theme:
   favicon: assets/perla-logo-icon.png
   features:
     - navigation.instant
+    - navigation.path
+    - navigation.footer
+    - navigation.top
+    - content.code.copy
+    - content.code.annotate
   custom_dir: docs/theme
   icon:
     repo: fontawesome/brands/github
@@ -68,12 +74,18 @@ markdown_extensions:
       anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - toc:
       permalink: True
   - pymdownx.arithmatex:
       generic: true
-  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - mkdocs-click
   - pymdownx.extra
 extra:

@@ -97,3 +97,64 @@
     width: 100%;
     overflow-x: auto;
 }
+
+/* Hide right TOC sidebar on notebook pages for cleaner layout */
+.md-typeset .jupyter-wrapper ~ .md-sidebar--secondary,
+article:has(.jupyter-wrapper) ~ .md-sidebar--secondary {
+    display: none;
+}
+
+/* Expand notebook content when TOC is hidden */
+.jupyter-wrapper {
+    max-width: 100%;
+}
+
+/* Screenshot styling with shadows */
+.screenshot {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
+    margin: 1em;
+    max-width: calc(100% - 2em) !important;
+    border-radius: 4px;
+}
+
+/* Image container layouts */
+.image-container p {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    align-content: stretch;
+}
+
+/* Center button alignment */
+.md-typeset .md-button.center,
+.md-typeset a.md-button.center {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Better notebook cell styling */
+.jp-Cell {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.jp-InputArea-editor {
+    border-radius: 4px;
+}
+
+/* Code copy button styling */
+.md-clipboard {
+    color: var(--md-default-fg-color--lighter);
+}
+
+.md-clipboard:hover {
+    color: var(--md-accent-fg-color);
+}
