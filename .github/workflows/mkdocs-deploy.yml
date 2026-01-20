@@ -24,7 +24,7 @@ jobs:
         with:
           repository: FAIRmat-NFDI/nomad-perovskite-solar-cells-database
           ref: main
-          path: ../nomad-perovskite-solar-cells-database
+          path: nomad-perovskite-solar-cells-database
 
       - name: Install uv
         uses: astral-sh/setup-uv@v5

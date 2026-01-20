@@ -7,19 +7,37 @@ set -e  # Exit on error
 # Define paths
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 PERLA_DIR="$(dirname "$SCRIPT_DIR")"
-NOTEBOOKS_SOURCE="$PERLA_DIR/../nomad-perovskite-solar-cells-database/src/perovskite_solar_cell_database/example_uploads/perla_notebooks"
 NOTEBOOKS_TARGET="$PERLA_DIR/docs/notebooks"
 
-echo "Preparing documentation notebooks..."
-echo "Source: $NOTEBOOKS_SOURCE"
-echo "Target: $NOTEBOOKS_TARGET"
+# Subpath within the perovskite plugin
+PEROVSKITE_SUBPATH="src/perovskite_solar_cell_database/example_uploads/perla_notebooks"
 
-# Check if source directory exists
-if [ ! -d "$NOTEBOOKS_SOURCE" ]; then
-    echo "ERROR: Source notebooks directory not found: $NOTEBOOKS_SOURCE"
-    echo "Please ensure nomad-perovskite-solar-cells-database is available as a sibling directory."
+# Check multiple possible locations for the perovskite plugin
+# Location 1: Sibling directory (local dev with monorepo structure)
+NOTEBOOKS_SOURCE_LOCAL="$PERLA_DIR/../nomad-perovskite-solar-cells-database/$PEROVSKITE_SUBPATH"
+# Location 2: Inside workspace root (CI checkout structure)
+NOTEBOOKS_SOURCE_CI="$PERLA_DIR/nomad-perovskite-solar-cells-database/$PEROVSKITE_SUBPATH"
+
+echo "Preparing documentation notebooks..."
+
+# Determine which source exists
+if [ -d "$NOTEBOOKS_SOURCE_LOCAL" ]; then
+    NOTEBOOKS_SOURCE="$NOTEBOOKS_SOURCE_LOCAL"
+    echo "Found notebooks in sibling directory (local dev structure)"
+elif [ -d "$NOTEBOOKS_SOURCE_CI" ]; then
+    NOTEBOOKS_SOURCE="$NOTEBOOKS_SOURCE_CI"
+    echo "Found notebooks in workspace subdirectory (CI structure)"
+else
+    echo "ERROR: Source notebooks directory not found!"
+    echo "Checked locations:"
+    echo "  1. $NOTEBOOKS_SOURCE_LOCAL"
+    echo "  2. $NOTEBOOKS_SOURCE_CI"
+    echo "Please ensure nomad-perovskite-solar-cells-database is available."
     exit 1
 fi
+
+echo "Source: $NOTEBOOKS_SOURCE"
+echo "Target: $NOTEBOOKS_TARGET"
 
 # Remove existing notebooks directory (could be symlink or directory)
 if [ -e "$NOTEBOOKS_TARGET" ]; then
