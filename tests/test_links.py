@@ -36,20 +36,39 @@ def test_notebooks_symlink_or_directory_exists():
 
 def test_notebooks_source_accessible():
     """Verify the source notebooks in perovskite plugin are accessible."""
-    # Resolve the actual source path
-    source_path = (
-        PERLA_DIR.parent
-        / 'nomad-perovskite-solar-cells-database'
-        / 'src'
-        / 'perovskite_solar_cell_database'
+    # Subpath within the perovskite plugin
+    perovskite_subpath = (
+        'src'
+        / Path('perovskite_solar_cell_database')
         / 'example_uploads'
         / 'perla_notebooks'
     )
 
-    assert source_path.exists(), (
-        f'Source notebooks directory not found: {source_path}\n'
-        f'Ensure nomad-perovskite-solar-cells-database is available as a sibling package.'
+    # Check multiple possible locations for the perovskite plugin
+    # Location 1: Sibling directory (local dev with monorepo structure)
+    source_path_local = (
+        PERLA_DIR.parent / 'nomad-perovskite-solar-cells-database' / perovskite_subpath
     )
+    # Location 2: Inside workspace root (CI checkout structure)
+    source_path_ci = (
+        PERLA_DIR / 'nomad-perovskite-solar-cells-database' / perovskite_subpath
+    )
+
+    # Determine which source exists
+    if source_path_local.exists():
+        source_path = source_path_local
+        print('✓ Found notebooks in sibling directory (local dev structure)')
+    elif source_path_ci.exists():
+        source_path = source_path_ci
+        print('✓ Found notebooks in workspace subdirectory (CI structure)')
+    else:
+        pytest.fail(
+            f'Source notebooks directory not found!\n'
+            f'Checked locations:\n'
+            f'  1. {source_path_local}\n'
+            f'  2. {source_path_ci}\n'
+            f'Ensure nomad-perovskite-solar-cells-database is available.'
+        )
 
     # Check for expected notebooks
     notebooks = list(source_path.glob('*.ipynb'))
