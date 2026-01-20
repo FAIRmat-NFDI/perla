@@ -19,6 +19,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Checkout perovskite plugin for notebooks
+        uses: actions/checkout@v4
+        with:
+          repository: FAIRmat-NFDI/nomad-perovskite-solar-cells-database
+          path: packages/nomad-perovskite-solar-cells-database
+
       - name: Install uv
         uses: astral-sh/setup-uv@v5
         with:
