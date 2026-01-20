@@ -29,6 +29,11 @@ jobs:
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
+      - name: Prepare Documentation Notebooks
+        run: |
+          chmod +x scripts/prepare_docs.sh
+          ./scripts/prepare_docs.sh
+
       - name: Build and Deploy
         run: |
           uv run --extra dev mkdocs gh-deploy --force --remote-branch gh-pages
