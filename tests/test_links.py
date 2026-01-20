@@ -3,12 +3,11 @@ Test suite to validate documentation links and notebook paths.
 Ensures notebooks from perovskite plugin are accessible and internal links resolve.
 """
 
-import os
 import re
 from pathlib import Path
+
 import pytest
 import yaml
-
 
 # Get the perla package directory
 PERLA_DIR = Path(__file__).parent.parent
