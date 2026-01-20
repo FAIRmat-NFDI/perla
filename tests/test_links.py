@@ -59,7 +59,7 @@ def test_notebooks_source_accessible():
 
 def test_all_referenced_notebooks_exist():
     """Verify all notebooks referenced in mkdocs.yml actually exist."""
-    with open(MKDOCS_CONFIG, 'r') as f:
+    with open(MKDOCS_CONFIG) as f:
         config = yaml.safe_load(f)
 
     # Extract all notebook references from nav
@@ -92,7 +92,7 @@ def test_all_referenced_notebooks_exist():
             print(f'✓ {notebook_ref}')
 
     assert not missing_notebooks, (
-        f'Missing notebooks referenced in mkdocs.yml:\n'
+        'Missing notebooks referenced in mkdocs.yml:\n'
         + '\n'.join(f'  - {nb}' for nb in missing_notebooks)
     )
 
@@ -121,22 +121,17 @@ def test_markdown_internal_links():
     broken_links = []
 
     for md_file in markdown_files:
-        with open(md_file, 'r', encoding='utf-8') as f:
+        with open(md_file, encoding='utf-8') as f:
             content = f.read()
 
         matches = link_pattern.findall(content)
 
         for link_text, link_path in matches:
-            # Skip external URLs
-            if link_path.startswith(('http://', 'https://', 'mailto:', '#')):
-                continue
-
-            # Skip anchor-only links
-            if link_path.startswith('#'):
-                continue
-
-            # Skip placeholders
-            if 'PLACEHOLDER' in link_path:
+            # Skip external URLs, anchors, and placeholders
+            if (
+                link_path.startswith(('http://', 'https://', 'mailto:', '#'))
+                or 'PLACEHOLDER' in link_path
+            ):
                 continue
 
             # Resolve relative links
