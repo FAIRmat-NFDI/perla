@@ -52,7 +52,3 @@ DOI: [PLACEHOLDER_DOI], https://nomad-lab.eu/prod/v1/staging/gui/search/perovski
 ### Individual Publications
 
 PERLA maintains full provenance for all extracted data. When using specific extracted parameters, consider also citing the original source publications. This information is available in the metadata for each database entry.
-
-
-
-*Thank you for properly citing PERLA and supporting open science practices in materials research!*
