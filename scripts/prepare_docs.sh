@@ -57,7 +57,6 @@ NOTEBOOKS=(
     "diversity-analysis.ipynb"
     "crabnet-perovskite-bandgap-prediction.ipynb"
     "ml-distribution-shift-case-study.ipynb"
-    "perovscribe-analysis.ipynb"
     "perovskite-paperbot-plot.ipynb"
     "perla-evals-analysis.ipynb"
     "physics_filter.ipynb"
