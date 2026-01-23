@@ -59,6 +59,7 @@ NOTEBOOKS=(
     "ml-distribution-shift-case-study.ipynb"
     "perovscribe-analysis.ipynb"
     "perovskite-paperbot-plot.ipynb"
+    "physics_filter.ipynb"
 )
 
 # Copy specific notebooks
