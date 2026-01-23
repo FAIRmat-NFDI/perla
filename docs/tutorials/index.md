@@ -10,7 +10,7 @@ New to PERLA? Start here to learn the basics:
 
 ## Jupyter Notebooks
 
-Dive deeper with our interactive case studies and analysis notebooks:
+These are a set of notebooks that performed analysis that we describe in the PERLA paper. They require a parquet file that you need to generate with the [Query PERLA Database](../notebooks/query-perovskite-database.ipynb) notebook or by creating it NOMAD directly (TODO).
 
 - **[Query PERLA Database](../notebooks/query-perovskite-database.ipynb)** - Learn how to retrieve data programmatically via the NOMAD API
 - **[Performance Evolution Analysis](../notebooks/performance-evolution.ipynb)** - Analyze power conversion efficiency trends over time

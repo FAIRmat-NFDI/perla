@@ -134,11 +134,6 @@ where = ["src"]
 
 [project.entry-points.'nomad.plugin']
 
-
-
-
-
-
 [tool.cruft]
 # Avoid updating workflow files, this leads to permissions issues
 skip = [".github/*"]
