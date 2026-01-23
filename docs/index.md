@@ -19,7 +19,7 @@ It provides tools and workflows for extracting, structuring, and analyzing exper
 ### 📚 Tutorials
 **Learning-oriented guides**
 
-Start your PERLA journey with step-by-step tutorials and interactive Jupyter notebooks demonstrating data queries, analysis workflows, and machine learning applications.
+ Step-by-step tutorials and interactive Jupyter notebooks demonstrating data queries, analysis workflows, and machine learning applications descripbed in the paper.
 
 [**Explore Tutorials**](tutorials/index.md)
 </div>
@@ -29,7 +29,7 @@ Start your PERLA journey with step-by-step tutorials and interactive Jupyter not
 ### 📖 How-to Guides
 **Task-oriented instructions**
 
-Accomplish specific tasks: access data via NOMAD, query the API, run extraction tools locally, or contribute data and code to the project.
+Contribute to bteh docs, access data in NOMAD, query the API, run extraction tools locally, or contribute data and code to the project.
 
 [**Browse How-to Guides**](how_to/index.md)
 </div>
@@ -39,7 +39,7 @@ Accomplish specific tasks: access data via NOMAD, query the API, run extraction 
 ### 💡 Explanation
 **Understanding-oriented context**
 
-Understand PERLA's architecture, the living database concept, physics-based validation, data schema design, and the ecosystem powering automated extraction.
+Understand PERLA's repositories, the living database concept, the data validation, and the ecosystem powering the database and automated extraction.
 
 [**Read Explanations**](explanation/index.md)
 </div>
@@ -49,7 +49,7 @@ Understand PERLA's architecture, the living database concept, physics-based vali
 ### 📋 Reference
 **Information-oriented documentation**
 
-Technical specifications, API documentation, data schema details, and bibliographic resources for researchers and developers.
+Technical specifications, data schema details, and bibliographic resources for researchers and developers.
 
 [**View Reference**](reference/index.md)
 </div>
