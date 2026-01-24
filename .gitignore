@@ -133,3 +133,7 @@ dmypy.json
 #parquet
 *.parquet
 docs/.DS_Store
+
+.claude/ 
+.vscode/
+.devcontainer/
