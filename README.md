@@ -1,118 +1,62 @@
-# perla
+# PERLA - The PERovskite photovoltaics Living Archive
 
-LA hub.
+PERLA (The PERovskite photovoltaics Living Archive) is a comprehensive platform for analyzing and exploring perovskite solar cell research data. This repository contains the documentation hub that provides tutorials, guides, and interactive notebooks for working with perovskite datasets.
 
-This `nomad` plugin was generated with `Cookiecutter` along with `@nomad`'s [`cookiecutter-nomad-plugin`](https://github.com/FAIRmat-NFDI/cookiecutter-nomad-plugin) template.
+## Features
 
-## Development
+- **Interactive Notebooks**: Jupyter notebooks demonstrating data analysis techniques
+- **Documentation**: Comprehensive guides following the Diátaxis framework
+- **Data Analysis Tools**: Examples for querying and analyzing perovskite solar cell databases
+- **Machine Learning Examples**: Tutorials on applying ML to perovskite research
 
-If you want to develop locally this plugin, clone the project and in the plugin folder, create a virtual environment (you can use Python 3.10, 3.11 or 3.12):
-```sh
+## Quick Start
+
+### Documentation
+
+Visit the documentation at https://fairmat-nfdi.github.io/perla to explore:
+
+- **Tutorials**: Step-by-step learning guides
+- **How-to Guides**: Task-oriented instructions
+- **Case Studies**: Real-world analysis examples
+- **Reference**: Technical documentation
+
+### Local Development
+
+To build and serve the documentation locally:
+
+```bash
+# Clone this repository
 git clone https://github.com/FAIRmat-NFDI/perla.git
 cd perla
-python3.11 -m venv .pyenv
-. .pyenv/bin/activate
-```
 
-Make sure to have `pip` upgraded:
-```sh
-pip install --upgrade pip
-```
+# Install dependencies
+uv sync
 
-We recommend installing `uv` for fast pip installation of the packages:
-```sh
-pip install uv
-```
+# Prepare documentation (requires nomad-perovskite-solar-cells-database)
+./scripts/prepare_docs.sh
 
-Install the `nomad-lab` package:
-```sh
-uv pip install -e '.[dev]'
-```
-
-### Run the tests
-
-You can run locally the tests:
-```sh
-python -m pytest -sv tests
-```
-
-where the `-s` and `-v` options toggle the output verbosity.
-
-Our CI/CD pipeline produces a more comprehensive test report using the `pytest-cov` package. You can generate a local coverage report:
-```sh
-uv pip install pytest-cov
-python -m pytest --cov=src tests
-```
-
-### Run linting and auto-formatting
-
-We use [Ruff](https://docs.astral.sh/ruff/) for linting and formatting the code. Ruff auto-formatting is also a part of the GitHub workflow actions. You can run locally:
-```sh
-ruff check .
-ruff format . --check
-```
-
-### Debugging
-
-For interactive debugging of the tests, use `pytest` with the `--pdb` flag. We recommend using an IDE for debugging, e.g., _VSCode_. If that is the case, add the following snippet to your `.vscode/launch.json`:
-```json
-{
-  "configurations": [
-      {
-        "name": "<descriptive tag>",
-        "type": "debugpy",
-        "request": "launch",
-        "cwd": "${workspaceFolder}",
-        "program": "${workspaceFolder}/.pyenv/bin/pytest",
-        "justMyCode": true,
-        "env": {
-            "_PYTEST_RAISE": "1"
-        },
-        "args": [
-            "-sv",
-            "--pdb",
-            "<path-to-plugin-tests>",
-        ]
-    }
-  ]
-}
-```
-
-where `<path-to-plugin-tests>` must be changed to the local path to the test module to be debugged.
-
-The settings configuration file `.vscode/settings.json` automatically applies the linting and formatting upon saving the modified file.
-
-### Documentation on Github pages
-
-To view the documentation locally, install the related packages using:
-```sh
-uv pip install -r requirements_docs.txt
-```
-
-Run the documentation server:
-```sh
+# Serve locally
 mkdocs serve
 ```
 
-## Adding this plugin to NOMAD
+## Contributing
 
-Currently, NOMAD has two distinct flavors that are relevant depending on your role as an user:
-1. [A NOMAD Oasis](#adding-this-plugin-in-your-nomad-oasis): any user with a NOMAD Oasis instance.
-2. [Local NOMAD installation and the source code of NOMAD](#adding-this-plugin-in-your-local-nomad-installation-and-the-source-code-of-nomad): internal developers.
+We welcome contributions! Please see our [contribution guide](docs/how_to/contribute_to_the_documentation.md) for detailed instructions on:
 
-### Adding this plugin in your NOMAD Oasis
+- Adding new notebooks
+- Building documentation locally
+- Testing changes
+- Repository structure requirements
 
-Read the [NOMAD plugin documentation](https://nomad-lab.eu/prod/v1/staging/docs/howto/oasis/plugins_install.html) for all details on how to deploy the plugin on your NOMAD instance.
+## Repository Structure
 
-### Adding this plugin in your local NOMAD installation and the source code of NOMAD
-
-We now recommend using the dedicated [`nomad-distro-dev`](https://github.com/FAIRmat-NFDI/nomad-distro-dev) repository to simplify the process. Please refer to that repository for detailed instructions.
-
-### Template update
-
-We use [`cruft`](https://github.com/cruft/cruft) to update the project based on template changes. To run the check for updates locally, run `cruft update` in the root of the project. More details see the instructions on [`cruft` website](https://cruft.github.io/cruft/#updating-a-project).
-
-## Main contributors
-| Name | E-mail     |
-|------|------------|
-| Pepe Marquez | [jose.marquez@physik.hu-berlin.de](mailto:jose.marquez@physik.hu-berlin.de)
+```
+perla/
+├── docs/                   # Documentation source files
+│   ├── how_to/            # How-to guides
+│   ├── tutorials/         # Learning-oriented tutorials
+│   └── notebooks/         # Generated notebook files (not in git)
+├── scripts/               # Build and utility scripts
+├── tests/                 # Documentation tests
+└── mkdocs.yml            # MkDocs configuration
+```

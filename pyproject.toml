@@ -13,7 +13,7 @@ classifiers = [
     "License :: OSI Approved :: Apache Software License",
 ]
 name = "perla"
-description = "LA hub."
+description = "The PERovskite photovoltaics Living Archive - Documentation hub for perovskite solar cell research data analysis"
 version = "0.1.0"
 readme = "README.md"
 requires-python = ">=3.10"

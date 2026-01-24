@@ -75,6 +75,38 @@ uv run pytest tests/test_links.py -v
 - UV package manager
 - Both `perla` and `nomad-perovskite-solar-cells-database` repositories as siblings
 
+### Repository Structure Requirements
+
+**Important**: The `prepare_docs.sh` script assumes a specific local repository structure. You must have both repositories cloned as sibling directories:
+
+```
+your-workspace/
+├── perla/                                    # This repository
+└── nomad-perovskite-solar-cells-database/   # Perovskite plugin repository
+```
+
+To set up this structure:
+
+1. Clone both repositories:
+   ```bash
+   git clone https://github.com/FAIRmat-NFDI/perla.git
+   git clone https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database.git
+   ```
+
+2. Ensure the `nomad-perovskite-solar-cells-database` repository is up to date:
+   ```bash
+   cd nomad-perovskite-solar-cells-database
+   git pull origin main
+   cd ../perla
+   ```
+
+3. Work from within the `perla` repository directory
+
+The script looks for notebooks in:
+- `../nomad-perovskite-solar-cells-database/src/perovskite_solar_cell_database/example_uploads/perla_notebooks/`
+
+If this path doesn't exist, the documentation build will fail.
+
 ### Build and serve
 
 ```bash

@@ -132,7 +132,10 @@ dmypy.json
 
 #parquet
 *.parquet
-docs/.DS_Store
+
+# macOS files
+.DS_Store
+**/.DS_Store
 
 .claude/ 
 .vscode/
