@@ -1,5 +1,5 @@
 site_name: PERLA
-site_description: Perovskite Extraction & Research Living Archive - The autonomous living database for perovskite solar cells
+site_description: The PERovskite photovoltaics Living Archive - Documentation and tutorials for perovskite solar cell research data analysis
 site_author: PERLA Team
 
 repo_url: https://github.com/FAIRmat-NFDI/perla
@@ -8,9 +8,9 @@ edit_uri: ""
 nav:
   - Home: index.md
   - Tutorials:
+      - Overview: tutorials/index.md
       - Getting Started: tutorials/getting_started.md
-      - Your First Query: tutorials/first_query.md
-      - Case Studies:
+      - Jupyter Notebooks:
           - Query PERLA Database: notebooks/query-perovskite-database.ipynb
           - Performance Evolution Analysis: notebooks/performance-evolution.ipynb
           - Bandgap Evolution Analysis: notebooks/bandgap-evolution.ipynb
@@ -18,25 +18,20 @@ nav:
           - Diversity Analysis: notebooks/diversity-analysis.ipynb
           - ML Prediction with CrabNet: notebooks/crabnet-perovskite-bandgap-prediction.ipynb
           - Distribution Shift Case Study: notebooks/ml-distribution-shift-case-study.ipynb
-          - LLM Extraction Evaluation: notebooks/perovscribe-analysis.ipynb
           - Papersbot Pipeline: notebooks/perovskite-paperbot-plot.ipynb
+          - Performance Check Filtering: notebooks/physics_filter.ipynb
+          - PERLA Evaluations Analysis: notebooks/perla-evals-analysis.ipynb
   - How-to Guides:
-      - Access Data in NOMAD: how_to/nomad_access.md
-      - Query via API: how_to/api_query.md
-      - Run Local Extraction: how_to/local_extraction.md
-      - Run the Automation Bot: how_to/automation_bot.md
-      - Contribute Data: how_to/contribute_data.md
-      - Contribute to PERLA: how_to/contribute_to_perla.md
+      - Overview: how_to/index.md
       - Contribute to Documentation: how_to/contribute_to_the_documentation.md
   - Explanation:
+      - Overview: explanation/index.md
       - What is PERLA?: explanation/what_is_perla.md
       - Architecture & Pipeline: explanation/architecture.md
-      - Data Schema & Normalization: explanation/schema_mapping.md
       - Ecosystem & Credits: explanation/ecosystem.md
       - Citation Guidelines: explanation/citation.md
   - Reference:
-      - API Reference: reference/api.md
-      - Data Schema: reference/schema.md
+      - Overview: reference/index.md
       - Bibliography: reference/bibliography.md
 plugins:
   - search
@@ -62,7 +57,9 @@ theme:
     - navigation.top
     - content.code.copy
     - content.code.annotate
-  custom_dir: docs/theme
+    - search.suggest
+    - search.highlight
+    - search.share
   icon:
     repo: fontawesome/brands/github
 markdown_extensions:
@@ -94,4 +91,3 @@ extra_css:
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://cdn.plot.ly/plotly-2.26.0.min.js
-  - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js

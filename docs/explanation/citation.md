@@ -18,7 +18,21 @@ For specific aspects of PERLA, consider additional citations:
 
 **For the NOMAD platform integration:**
 ```
-@article{Scheidgen2023, doi = {10.21105/joss.05388}, url = {https://doi.org/10.21105/joss.05388}, year = {2023}, publisher = {The Open Journal}, volume = {8}, number = {90}, pages = {5388}, author = {Scheidgen, Markus and Himanen, Lauri and Ladines, Alvin Noe and Sikter, David and Nakhaee, Mohammad and Fekete, Ádám and Chang, Theodore and Golparvar, Amir and Márquez, José A. and Brockhauser, Sandor and Brückner, Sebastian and Ghiringhelli, Luca M. and Dietrich, Felix and Lehmberg, Daniel and Denell, Thea and Albino, Andrea and Näsström, Hampus and Shabih, Sherjeel and Dobener, Florian and Kühbach, Markus and Mozumder, Rubel and Rudzinski, Joseph F. and Daelman, Nathan and Pizarro, José M. and Kuban, Martin and Salazar, Cuauhtemoc and Ondračka, Pavel and Bungartz, Hans-Joachim and Draxl, Claudia}, title = {NOMAD: A distributed web-based platform for managing materials science research data}, journal = {Journal of Open Source Software} }
+@article{Scheidgen2023,
+  title = {NOMAD: A distributed web-based platform for managing
+materials science research data},
+  volume = {8},
+  ISSN = {2475-9066},
+  url = {http://dx.doi.org/10.21105/joss.05388},
+  DOI = {10.21105/joss.05388},
+  number = {90},
+  journal = {Journal of Open Source Software},
+  publisher = {The Open Journal},
+  author = {Scheidgen,  Markus and Himanen,  Lauri and Ladines,  Alvin Noe and Sikter,  David and Nakhaee,  Mohammad and Fekete,  Ádám and Chang,  Theodore and Golparvar,  Amir and Márquez,  José A. and Brockhauser,  Sandor and Br\"{u}ckner,  Sebastian and Ghiringhelli,  Luca M. and Dietrich,  Felix and Lehmberg,  Daniel and Denell,  Thea and Albino,  Andrea and N\"{a}sstr\"{o}m,  Hampus and Shabih,  Sherjeel and Dobener,  Florian and K\"{u}hbach,  Markus and Mozumder,  Rubel and Rudzinski,  Joseph F. and Daelman,  Nathan and Pizarro,  José M. and Kuban,  Martin and Salazar,  Cuauhtemoc and Ondračka,  Pavel and Bungartz,  Hans-Joachim and Draxl,  Claudia},
+  year = {2023},
+  month = oct,
+  pages = {5388}
+}
 ```
 
 **For the ions database:**
@@ -52,7 +66,3 @@ DOI: [PLACEHOLDER_DOI], https://nomad-lab.eu/prod/v1/staging/gui/search/perovski
 ### Individual Publications
 
 PERLA maintains full provenance for all extracted data. When using specific extracted parameters, consider also citing the original source publications. This information is available in the metadata for each database entry.
-
-
-
-*Thank you for properly citing PERLA and supporting open science practices in materials research!*

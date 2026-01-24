@@ -1,6 +1,6 @@
 # Ecosystem & Credits
 
-PERLA is built through collaborative efforts across multiple institutions and relies on a rich ecosystem of tools, platforms, and data sources.
+PERLA is built through collaborative efforts and relies on a rich ecosystem of tools, platforms, and data sources.
 
 ## Core Team & Contributors
 
@@ -16,7 +16,6 @@ PERLA is built through collaborative efforts across multiple institutions and re
 
 - Main project repository
 - Documentation and tutorials
-- Project coordination and issue tracking
 
 **[lamalab-org/perla-extract](https://github.com/lamalab-org/perla-extract)**
 
@@ -29,7 +28,7 @@ PERLA is built through collaborative efforts across multiple institutions and re
 - NOMAD schema definitions
 - Database normalization procedures
 - Example datasets and validation scripts
-- Ion processing
+- Halide perovskite ions database and processing
 
 ## Community & Collaboration
 
@@ -41,23 +40,7 @@ PERLA is committed to open science and follows FAIR data principles:
 - **Open Standards**: Community-driven schema development
 - **Open Collaboration**: Transparent development process
 
-### Contributing Guidelines
-The project welcomes contributions from the scientific community. Examples for contributions are:
-
-- Data validation and quality feedback
-- Schema improvements and extensions
-- Tool development and integration
-- Documentation and tutorial creation
-
 ### Citation & Attribution
 
 When using PERLA data or tools, please cite it as described in the [citation guidelines](citation.md)
 
-
-## Future Development
-
-### Roadmap
-- Automated schema revisions
-- Enhanced multimodal processing capabilities
-- Use of open LLMs
-- Community feedback integration tools

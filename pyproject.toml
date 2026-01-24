@@ -13,14 +13,16 @@ classifiers = [
     "License :: OSI Approved :: Apache Software License",
 ]
 name = "perla"
-description = "LA hub."
+description = "The PERovskite photovoltaics Living Archive - Documentation hub for perovskite solar cell research data analysis"
 version = "0.1.0"
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [
+    {name = "PERLA Team"},
     { name = "Pepe Marquez", email = "jose.marquez@physik.hu-berlin.de" },
 ]
 maintainers = [
+    {name = "PERLA Team"},
     { name = "Pepe Marquez", email = "jose.marquez@physik.hu-berlin.de" },
 ]
 license = { file = "LICENSE" }
@@ -133,11 +135,6 @@ package-dir = { "" = "src" }
 where = ["src"]
 
 [project.entry-points.'nomad.plugin']
-
-
-
-
-
 
 [tool.cruft]
 # Avoid updating workflow files, this leads to permissions issues

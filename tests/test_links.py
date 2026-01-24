@@ -222,7 +222,6 @@ def test_required_notebooks_present():
         'diversity-analysis.ipynb',
         'crabnet-perovskite-bandgap-prediction.ipynb',
         'ml-distribution-shift-case-study.ipynb',
-        'perovscribe-analysis.ipynb',
         'perovskite-paperbot-plot.ipynb',
     ]
 
