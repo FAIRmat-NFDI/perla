@@ -1,4 +1,4 @@
-# <img src="assets/perla-logo.png" alt="PERLA logotype featuring a geometric crystal structure icon composed of four blue perovskite unit cells arranged symmetrically on the left, followed by large blue text reading PERLA with Perovskite Living Archive subtitle in smaller blue letters" width="400" position="center" />
+# <img src="assets/perla-logo.png" alt="PERLA logotype featuring a geometric crystal structure icon composed of four blue perovskite unit cells arranged symmetrically on the left, followed by large blue text reading PERLA with Perovskite Living Archive subtitle in smaller blue letters" width="400" />
 
 PERLA is an ecosystem for perovskite solar cells data built on NOMAD.
 It provides tools and workflows for extracting, structuring, and analyzing experimental data from the scientific literature.
