@@ -19,7 +19,7 @@ It provides tools and workflows for extracting, structuring, and analyzing exper
 ### 📚 Tutorials
 **Learning-oriented guides**
 
- Step-by-step tutorials and interactive Jupyter notebooks demonstrating data queries, analysis workflows, and machine learning applications descripbed in the paper.
+Step-by-step tutorials and interactive Jupyter notebooks demonstrating data queries, analysis workflows, and machine learning applications descripbed in the paper.
 
 [**Explore Tutorials**](tutorials/index.md)
 </div>
