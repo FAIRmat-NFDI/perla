@@ -8,7 +8,7 @@ Understanding-oriented documentation to help you grasp the concepts, design deci
 
 ## System Design
 
-- **[Architecture & Pipeline](architecture.md)** - Explore the main four-component somponents: literature monitoring, data extraction, NOMAD ingestion, and data exploration
+- **[Architecture & Pipeline](architecture.md)** - Explore the four main components: literature monitoring, data extraction, NOMAD ingestion, and data exploration
 
 ## Community & Context
 
