@@ -13,6 +13,8 @@ Create your notebook in:
 nomad-perovskite-solar-cells-database/src/perovskite_solar_cell_database/example_uploads/perla_notebooks/
 ```
 
+using a pull request to the [nomad-perovskite-solar-cells-database](https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database) plugin repository.
+
 Use **hyphens** in filenames (e.g., `my-new-analysis.ipynb`), not underscores.
 
 ### 2. Update the build script

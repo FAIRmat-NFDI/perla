@@ -29,7 +29,7 @@ It provides tools and workflows for extracting, structuring, and analyzing exper
 ### 📖 How-to Guides
 **Task-oriented instructions**
 
-Contribute to bteh docs, access data in NOMAD, query the API, run extraction tools locally, or contribute data and code to the project.
+Contribute to the docs, access data in NOMAD, query the API, run extraction tools locally, or contribute data and code to the project.
 
 [**Browse How-to Guides**](how_to/index.md)
 </div>

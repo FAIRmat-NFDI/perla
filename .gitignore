@@ -132,3 +132,4 @@ dmypy.json
 
 #parquet
 *.parquet
+docs/.DS_Store

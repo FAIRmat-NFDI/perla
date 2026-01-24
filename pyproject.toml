@@ -18,9 +18,11 @@ version = "0.1.0"
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [
+    {name = "PERLA Team"},
     { name = "Pepe Marquez", email = "jose.marquez@physik.hu-berlin.de" },
 ]
 maintainers = [
+    {name = "PERLA Team"},
     { name = "Pepe Marquez", email = "jose.marquez@physik.hu-berlin.de" },
 ]
 license = { file = "LICENSE" }
