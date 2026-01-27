@@ -84,7 +84,7 @@ markdown_extensions:
   - pymdownx.extra
 extra:
   generator: false
-  homepage: https://nomad-lab.eu
+  homepage: https://fairmat-nfdi.github.io/perla/
 use_directory_urls: true
 extra_css:
   - stylesheets/extra.css

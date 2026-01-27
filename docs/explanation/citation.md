@@ -9,7 +9,15 @@ When using PERLA data, tools, or insights in your research, please follow these 
 When referencing PERLA in general, please cite our main publication:
 
 ```
-[PLACEHOLDER - Main PERLA paper citation]
+@misc{shabih2026autonomouslivingdatabaseperovskite,
+      title={An autonomous living database for perovskite photovoltaics},
+      author={Sherjeel Shabih and Hampus Näsström and Sharat Patil and Asmin Askin and Keely Dodd-Clements and Jessica Helisa Hautrive Rossato and Hugo Gajardoni de Lemos and Yuxin Liu and Florian Mathies and Natalia Maticiuc and Rico Meitzner and Edgar Nandayapa and Juan José Patiño López and Yaru Wang and Lauri Himanen and Eva Unger and T. Jesper Jacobsson and José A. Márquez and Kevin Maik Jablonka},
+      year={2026},
+      eprint={2601.17807},
+      archivePrefix={arXiv},
+      primaryClass={cond-mat.mtrl-sci},
+      url={https://arxiv.org/abs/2601.17807},
+}
 ```
 
 ### Specific Components

@@ -4,7 +4,7 @@ PERLA is built through collaborative efforts and relies on a rich ecosystem of t
 
 ## Core Team & Contributors
 
-### Lead Institutions
+### Supported by
 - [**FAIRmat-NFDI**](https://www.fairmat-nfdi.eu/): NFDI consortium for research data on condensed matter physics and chemistry
 - [**LAMALab**](https://lamalab.org): Lab for AI in Materials Science at FSU Jena/HIPOLE Jena
 
