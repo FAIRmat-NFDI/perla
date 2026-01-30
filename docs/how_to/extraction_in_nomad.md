@@ -1,13 +1,13 @@
 # Run extraction in NOMAD
 
-NOMAD Perovskite Solar Cells Database plugin allows users to extract solar cells data from scientific publications uploaded to NOMAD. This guide provides step-by-step instructions for running the extraction.
+NOMAD [Perovskite Solar Cells Database plugin](https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database) allows users to extract solar cells data from scientific publications uploaded to NOMAD. This guide provides step-by-step instructions for running the extraction.
 
 ## Requirements
 
-The data extraction can be run in central Test Oasis or any NOMAD deployment that
+The data extraction can be run in central [Test Oasis](https://nomad-lab.eu/prod/v1/oasis/gui) or any NOMAD deployment that
 
-- has NOMAD Perovskite Solar Cells Database plugin installed
-- supports NOMAD Actions and has CPU task queue with corresponding worker(s) running
+- has NOMAD [Perovskite Solar Cells Database plugin](https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database) installed
+- supports NOMAD [Actions](https://nomad-lab.eu/prod/v1/docs/howto/plugins/types/actions.html) and has CPU task queue with corresponding worker(s) running
 
 The publications must be uploaded in pdf format. An API key for one of the supported models is also required.
 
