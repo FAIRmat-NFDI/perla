@@ -14,7 +14,7 @@ Task-oriented guides to help you accomplish specific goals with PERLA.
 
 ## Running Tools in NOMAD
 
-- **[Run extraction in NOMAD](extraction_in_nomad.md)** - Run the extraction pipeline within NOMAD or NOMAD Oasis
+- **[Running extraction in NOMAD](extraction_in_nomad.md)** - Run the extraction pipeline within NOMAD or NOMAD Oasis
 
 ## Contributing
 
