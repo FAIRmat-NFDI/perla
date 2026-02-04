@@ -29,7 +29,17 @@ Next, choose a model from the list of available LLMs and enter the corresponding
 
 The entry will update to show a new *triggered action* subsection, including the action id and current status. The action typically runs for several minutes, with the duration depending on the number and size of the uploaded PDF files. During execution, the extractor attempts to identify all solar cells described in the publications and creates a new NOMAD entry for each one. After successful processing, the source PDF files are deleted.
 
-You can monitor the status of the action by clicking `GET ACTION STATUS`. Once the status is `COMPLETED`, the list of extracted solar cells will appear under *extracted solar cells*. The newly created entries can also be accessed by returning to the upload overview and selecting them from the list available under `2 Process data`.
+<video controls autoplay loop muted playsinline width="100%">
+  <source src="../../assets/videos/LLM_Extraction_ELN_start_action.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
+
+You can monitor the status of the action by clicking `GET ACTION STATUS`. Once the status is `COMPLETED`, the list of extracted solar cells will appear under *extracted solar cells* as `LLMExtractedPerovskiteSolarCell` entries. These newly created entries and their normalized form `PerovskiteSolarCell` (compatible with the perovskite database) can also be accessed by returning to the upload overview and selecting them from the list available under `2 Process data`.
+
+<video controls autoplay loop muted playsinline width="100%">
+  <source src="../../assets/videos/LLM_Extraction_ELN_results.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
 
 !!! note
 
