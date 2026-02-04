@@ -144,7 +144,7 @@ def _is_valid_anchor_link(link_path: str, md_file: Path) -> bool:
     """Check if an anchor link has a valid base file."""
     if '#' not in link_path:
         return False
-    base_path = link_path.split('#')[0]
+    base_path = link_path.split('#', maxsplit=1)[0]
     if not base_path:
         return False
     base_target = (md_file.parent / base_path).resolve()
