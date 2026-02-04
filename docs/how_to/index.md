@@ -12,6 +12,10 @@ Task-oriented guides to help you accomplish specific goals with PERLA.
 - **Run Local Extraction** - Set up and run the extraction pipeline on your machine *(coming soon)*
 - **Run the Automation Bot** - Deploy the automated literature monitoring system *(coming soon)*
 
+## Running Tools in NOMAD
+
+- **[Running extraction in NOMAD](extraction_in_nomad.md)** - Run the extraction pipeline within NOMAD or NOMAD Oasis
+
 ## Contributing
 
 - **[Contribute to Documentation](contribute_to_the_documentation.md)** - Add notebooks, improve docs, and follow best practices

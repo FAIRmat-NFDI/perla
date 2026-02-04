@@ -23,6 +23,7 @@ nav:
           - PERLA Evaluations Analysis: notebooks/perla-evals-analysis.ipynb
   - How-to Guides:
       - Overview: how_to/index.md
+      - Extraction in NOMAD: how_to/extraction_in_nomad.md
       - Contribute to Documentation: how_to/contribute_to_the_documentation.md
   - Explanation:
       - Overview: explanation/index.md
