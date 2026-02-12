@@ -13,11 +13,7 @@ Publications must be uploaded in PDF format. An API key for one of the supported
 
 ## Running the extraction
 
-Open the central NOMAD:
-
-```
-https://nomad-lab.eu/prod/v1/gui
-```
+Open the central [NOMAD](https://nomad-lab.eu/prod/v1/gui):
 
 Log in, then navigate to `PUBLISH/Uploads`, create a new empty upload, and add the PDF files of the publications to be processed.
 
