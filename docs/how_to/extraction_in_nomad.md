@@ -4,7 +4,7 @@ The NOMAD [Perovskite Solar Cells Database plugin](https://github.com/FAIRmat-NF
 
 ## Requirements
 
-Data extraction can be run in central [Test Oasis](https://nomad-lab.eu/prod/v1/oasis/gui) or in any NOMAD deployment that:
+Data extraction can be run in central [NOMAD](https://nomad-lab.eu/prod/v1/gui), [Test Oasis](https://nomad-lab.eu/prod/v1/oasis/gui) or in any NOMAD deployment that:
 
 - has the NOMAD [Perovskite Solar Cells Database plugin](https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database) installed
 - supports NOMAD [Actions](https://nomad-lab.eu/prod/v1/docs/howto/plugins/types/actions.html) and has a CPU task queue with corresponding worker(s) running
@@ -13,13 +13,13 @@ Publications must be uploaded in PDF format. An API key for one of the supported
 
 ## Running the extraction
 
-Open the Test Oasis:
+Open the central NOMAD:
 
 ```
-https://nomad-lab.eu/prod/v1/oasis/gui
+https://nomad-lab.eu/prod/v1/gui
 ```
 
-Navigate to `PUBLISH/Uploads`, create a new empty upload, and add the PDF files of the publications to be processed.
+Log in, then navigate to `PUBLISH/Uploads`, create a new empty upload, and add the PDF files of the publications to be processed.
 
 After the files have been uploaded, use `CREATE FROM SCHEMA` to add a new entry that will be used to process the PDFs. In the dialog window that appears, give the entry a name and select the built-in schema called `LLM Perovskite Paper Extractor`, then click `CREATE`.
 
@@ -43,4 +43,4 @@ You can monitor the status of the action by clicking `GET ACTION STATUS`. Once t
 
 !!! note
 
-    It is also possible to run the NOMAD Action directly without creating an `LLM Perovskite Paper Extractor` entry. This option is available only in the new [NOMAD GUI](https://nomad-lab.eu/prod/v1/oasis/gui/v2/) (currently in beta). Create a project, upload the publication files, then click `RUN ACTION`, select `LLMExtractionAction`, and fill in the form that appears. The results of the extraction will be shown directly within the project.
+    It is also possible to run the NOMAD Action directly without creating an `LLM Perovskite Paper Extractor` entry. This option is available only in the new [NOMAD GUI](https://nomad-lab.eu/prod/v1/gui/v2/) (currently in beta). Create a project, upload the publication files, then click `RUN ACTION`, select `LLMExtractionAction`, and fill in the form that appears. The results of the extraction will be shown directly within the project.
