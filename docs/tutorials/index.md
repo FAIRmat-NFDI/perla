@@ -19,7 +19,7 @@ These are a set of notebooks that performed analysis that we describe in the PER
 - **[Diversity Analysis](../notebooks/diversity-analysis.ipynb)** - Examine dataset composition and diversity metrics
 - **[ML Prediction with CrabNet](../notebooks/crabnet-perovskite-bandgap-prediction.ipynb)** - Tutorial on machine learning predictions using perovskite data
 - **[Distribution Shift Case Study](../notebooks/ml-distribution-shift-case-study.ipynb)** - Analyze distribution shifts in ML models
-- **[Papersbot Pipeline](../notebooks/perovskite-paperbot-plot.ipynb)** - Visualize the automated extraction pipeline
+- **[Papersbot Pipeline](../notebooks/perla-paperbot-plot.ipynb)** - Visualize the automated extraction pipeline
 - **[Performance Check Filtering](../notebooks/physics_filter.ipynb)** - Apply physics-based validation filters to data
 - **[PERLA Evaluations Analysis](../notebooks/perla-evals-analysis.ipynb)** - Analyze the performance of PERLA's data extraction evaluations
 

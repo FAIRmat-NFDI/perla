@@ -222,7 +222,7 @@ def test_required_notebooks_present():
         'diversity-analysis.ipynb',
         'crabnet-perovskite-bandgap-prediction.ipynb',
         'ml-distribution-shift-case-study.ipynb',
-        'perovskite-paperbot-plot.ipynb',
+        'perla-paperbot-plot.ipynb',
     ]
 
     notebooks_dir = DOCS_DIR / 'notebooks'

@@ -18,7 +18,7 @@ nav:
           - Diversity Analysis: notebooks/diversity-analysis.ipynb
           - ML Prediction with CrabNet: notebooks/crabnet-perovskite-bandgap-prediction.ipynb
           - Distribution Shift Case Study: notebooks/ml-distribution-shift-case-study.ipynb
-          - Papersbot Pipeline: notebooks/perovskite-paperbot-plot.ipynb
+          - Papersbot Pipeline: notebooks/perla-paperbot-plot.ipynb
           - Performance Check Filtering: notebooks/physics_filter.ipynb
           - PERLA Evaluations Analysis: notebooks/perla-evals-analysis.ipynb
   - How-to Guides:
